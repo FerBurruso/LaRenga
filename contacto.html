@@ -20,19 +20,47 @@
     <br><!-- Tuve que poner este br porque la barrita del form me tapaba el formulario. ¿Cómo debería haberlo solucionado? -->
     <main>
         <div>
-            <form action="">
+            <form action="" autocomplete="on">
                 <fieldset>
                     <legend>Ingrese sus datos:</legend>
                     <div>
-                        <label for="">Nombre:</label>
-                        <input type="text">
+                        <label for="">Nombre:
+                            <input id="nombre" name="nombre" type="text" required>
+                        </label>
                     </div>
                     <div>
-                        <label for="">Mail:</label>
-                        <input type="text">
+                        <label for="mail">Correo electrónico:
+                            <input id="mail" name="mail" type="email" placeholder="direccion@mail.com" required>
+                        </label>
                     </div>
-                   
 
+                    <fieldset>
+                        <legend>Fechas que fuiste</legend>
+                        <label for="cordoba">Córdoba
+                            <input id="cordoba" name="fechas" type="checkbox" value="cordoba" checked >
+                        </label>
+                        <label for="salta">Salta
+                            <input id="salta" name="fechas" type="checkbox" value="salta" >
+                        </label>
+                        <label for="san_luis">San Ñuis
+                            <input id="san_luis" name="fechas" type="checkbox" value="san_luis"  >
+                        </label>
+                        <label for="rio_negro">Río Negro
+                            <input id="rio_negro" name="fechas" type="checkbox" value="rio_negro#" >
+                        </label>
+                       
+                    </fieldset>
+
+                    <div>
+                        <label for="comentario">Dejanos tu mensaje:<!-- ¿Por qué este texto aparece al final del text area y no al principio? :( )-->
+                            <textarea name="comentario" id="comentario" cols="50" rows="10"></textarea>
+                        </label>
+                    </div>
+
+                    <div>
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Limpiar datos">
+                    </div>
 
                 </fieldset>
             </form>
